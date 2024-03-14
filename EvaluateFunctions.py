@@ -184,10 +184,10 @@ class EvaluateFunctions(object):
         for i in range(0,10):
             O=O-(np.sum((x-aSH[i])**2)+cSH[i])**(-1)
         return O
-    
+
     def getEvaluateFunc(self, funIndex):
         if funIndex==1:
-            return self.evaluateByF1
+            return bbobtorch.create_f01(30)
         elif funIndex==2:
             return self.evaluateByF2
         elif funIndex==3:
